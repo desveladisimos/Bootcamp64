@@ -32,13 +32,13 @@ Open the [browser](http://192.168.33.10)
 
 Connection Method: Standard TCP/IP over SSH
 
-SSH Hostname: 192.168.33.10
-SSH Username: vagrant
-SSH Password: vagrant
-SSH Key File: ~/Bootcamp64/.vagrant/machines/default/virtualbox/private_key
+SSH Hostname: 192.168.33.10  
+SSH Username: vagrant  
+SSH Password: vagrant  
+SSH Key File: ~/Bootcamp64/.vagrant/machines/default/virtualbox/private_key  
 
-MySQL Host: 127.0.0.1
-MySQL Port: 3306
-MySQL User: arkus
-MySQL Pass: nexus
+MySQL Host: 127.0.0.1  
+MySQL Port: 3306  
+MySQL User: arkus  
+MySQL Pass: nexus  
 

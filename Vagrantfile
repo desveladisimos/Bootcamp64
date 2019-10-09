@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   
   config.vm.hostname = "bootcamp"
 
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.66.10"
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--uartmode1", "file", ubuntu_log_file]
@@ -17,7 +17,9 @@ Vagrant.configure("2") do |config|
     vb.cpus = 2
   end
 
-  config.vm.synced_folder "./code", "/var/www"
+  config.vm.synced_folder "./code", "/var/www", 
+    :mount_options => ["dmode=777", "fmode=777"], 
+    :owner => 'vagrant', :group => 'www-data'
 
   config.vm.provision "shell", inline: <<-SHELL
     export DEBIAN_FRONTEND=noninteractive
